@@ -1,0 +1,41 @@
+//Created by: Khoa
+
+import java.util.ArrayList;
+
+public class Unit203 {
+	
+	private ArrayList stackA;
+	
+	public Unit203() {
+		
+		stackA = new ArrayList();
+		
+	}
+	
+	public void push(int number) {
+		
+		stackA.add(number);
+		
+	}
+	
+	public int pop() {
+		
+		int returnValue = (int)stackA.get(stackA.size()-1);
+		stackA.remove(stackA.size()-1);
+		return returnValue;
+		
+	}
+	
+	public void printStack() {
+		
+		if (stackA.isEmpty())
+			System.out.println("List is empty.");
+		else
+			System.out.println("Here is the list you created: " + stackA);
+		
+	}
+	
+	public int size() {
+		return stackA.size();
+	}	
+}
